@@ -10,18 +10,18 @@ rn_letter = int(input("Please input how many Letters would you like in your pass
 rn_number = int(input("Please input how many Numbers would you like in your password: "))
 rn_symbol = int(input("Please input how many Symbols would you like in your password: "))
 
-password_list = []
+password = []
 
 for char in range(1, rn_letter +1):
-    password_list += random.choice(letters)
+    password.append(random.choice(letters))
 for char in range(1, rn_number +1):
-    password_list += random.choice(numbers)
+    password.append(random.choice(numbers))
 for char in range(1, rn_symbol +1):
-    password_list += random.choice(symbols)
+    password.append(random.choice(symbols))
 
-random.shuffle(password_list)
+random.shuffle(password)
 
-password = ""
-for char in password_list:
-    password += char
-print(f"Here it is your warm Crispy Password! fresh from the Python oven 🔥🔥: {password}")
+final_password = ""
+for char in password:
+    final_password += char
+print(f"Here it is your warm Crispy Password! fresh from the Python oven 🔥🔥: {final_password}")
