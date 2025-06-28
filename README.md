@@ -1,6 +1,6 @@
 # 📚 100 Days of Coding Challenge 
 
-Welcome to my **#100DaysofCode** challenge repository! This is where I document my daily coding journey as I tackle Python programming concepts, solve problems, and build small projects every day for 100 days straight.
+Welcome to my **#100DaysofCode** challenge repository! This is where I documented my daily coding journey as I tackle Python programming concepts, solve problems, and build small projects every day for 100 days straight.
 
 ## 🚀 What's Inside?
 
