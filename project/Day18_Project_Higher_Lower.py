@@ -9,6 +9,7 @@ def format_data(account):
     account_country = account["country"]
     return f"{account_name} is a {account_desc}, from {account_country}"
 
+#
 def check_answ(user_guess,a_followers, b_followers):
     if a_followers > b_followers:
         return user_guess == "a"
