@@ -1,5 +1,11 @@
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from turtle import Turtle, Screen
 import time
+from snake import Snake
 
 screen = Screen()
 screen.bgcolor("black")
@@ -7,26 +13,19 @@ screen.setup(height=600, width=600)
 screen.title("King Python Carnival")
 screen.tracer(0)
 
-starting_position = [(0, 0), (-20, 0), (-40, 0)]
-segment = []
+snake = Snake()
+screen.listen()
+screen.onkey(snake.Up, "Up")
+screen.onkey(snake.Down, "Down")
+screen.onkey(snake.Left, "Left")
+screen.onkey(snake.Right, "Right")
 
-for position in starting_position:
-    new_segment = Turtle("square")
-    new_segment.color("white")
-    new_segment.penup()
-    new_segment.goto(position)
-    segment.append(new_segment)
 
 game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-    
-    for seg_num in range (len(segment)-1, 0, -1):
-        new_x = segment[seg_num-1].xcor()
-        new_y = segment[seg_num-1].ycor()
-        segment[seg_num].goto(new_x, new_y)
-    segment[0].forward(20)
-    segment[0].left(90)
+
+    snake.move()
 
 screen.exitonclick()
