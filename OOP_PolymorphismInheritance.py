@@ -7,8 +7,8 @@ class Parenting:
         pass
 
 
-class Child1(Parenting):
-    def learn(self):
+class Child1(Parenting): #polymorphism
+    def learn(self): #Inheritance
         print("Everyday learn math")
 
 
