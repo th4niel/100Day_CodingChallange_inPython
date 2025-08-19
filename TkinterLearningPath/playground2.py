@@ -3,6 +3,7 @@ from tkinter import *
 window = Tk()
 window.title("Hello")
 window.minsize(width=600, height=400)
+window.config(padx=80, pady=80) #pad stand for padding
 
 my_label = Label(text="Hello", font=("Arial", 25, "bold"))
 my_label.grid(column=0, row=0)
