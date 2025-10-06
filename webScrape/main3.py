@@ -11,5 +11,9 @@ soup = BeautifulSoup(website_html, "html.parser")
 all_movies = soup.find_all(name="h3", class_="title")
 
 movies_title = [movie.getText() for movie in all_movies]
+movies = movies_title[::-1] #reverse the index
 
-print(movies_title)
+with open("movie.txt", mode="w", encoding="utf-8") as file:
+    for movie in movies:
+        file.write(f"{movie}\n")
+
